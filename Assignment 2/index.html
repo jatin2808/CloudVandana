@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+
+  
+  
+    <form>
+      <label for="stringInput">Enter a string:</label><br>
+      <input type="text" id="stringInput" name="stringInput"><br><br>
+      <label for="charInput">Enter a character (A-Z or a-z):</label><br>
+      <input type="text" id="charInput" name="charInput" pattern="[A-Za-z]{1}"><br><br>
+      <input type="submit" value="Submit" onclick="displayRemainder(event)"><br><br>
+      <p id="output"></p>
+    </form>
+
+    <script>
+      function displayRemainder(event) {
+        event.preventDefault();
+        var stringInput = document.getElementById("stringInput").value;
+        var charInput = document.getElementById("charInput").value;
+        var charIndex = stringInput.indexOf(charInput);
+        if (charIndex === -1) {
+          document.getElementById("output").innerHTML = "The Letter does not exist in the String";
+        } else {
+          document.getElementById("output").innerHTML = stringInput.slice(charIndex + 1);
+          
+        }
+      }
+    </script>
+  
+
+
+</body>
+</html>

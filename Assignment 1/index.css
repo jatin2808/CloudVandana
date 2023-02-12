@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+  table{
+    
+    margin:auto;
+    margin-top:300px;
+    border-collapse: collapse;
+  }
+
+  th, td, button{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: lightgray;
+  }
+  #addRowTopBtn{
+    margin-top: 10px;
+    margin-left: 760px;
+  }
+
+  #addRowBottomBtn{
+    margin-top: 10px;
+    margin-left: 150px;
+  }
+
